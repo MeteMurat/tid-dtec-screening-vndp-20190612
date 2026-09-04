@@ -10,11 +10,20 @@ The revised study uses a fixed master network of 435 dual-frequency GPS stations
 
 The manuscript treats “moderate” and “strong” only as predefined numerical screening-support states. They are not independently confirmed TID labels, and no human- or AI-generated labels are used as physical ground truth.
 
+## v2.0.0 release preparation
+
+The revised five-day reproducibility release is being prepared as `v2.0.0`.
+
+- Release-candidate scientific scope and interpretation boundaries: [`RELEASE_NOTES_v2.0.0.md`](RELEASE_NOTES_v2.0.0.md)
+- Public-package completeness checklist: [`REPRODUCIBILITY_PACKAGE_CHECKLIST_v2.0.0.md`](REPRODUCIBILITY_PACKAGE_CHECKLIST_v2.0.0.md)
+
+The final `v2.0.0` release should be published only after the complete reproducibility archive is frozen, smoke-tested, and accompanied by its SHA-256 manifest.
+
 ## Public release v1.1.0
 
 The existing public release **v1.1.0** is retained as a legacy reproducibility/supplementary archive for the earlier single-day exploratory stage of the project (12 June 2019). It contains the archive `tid_dtec_screening_reproducibility_v1.1.0.zip` together with the earlier supplementary videos and still images.
 
-Because the current manuscript substantially expands the analysis to a five-day, dense-network reliability audit, **v1.1.0 should not be treated as the complete reproducibility package for the current manuscript**. A new versioned release containing the revised five-day analysis products should be deposited in this repository before final publication/submission of the reproducibility package.
+Because the current manuscript substantially expands the analysis to a five-day, dense-network reliability audit, **v1.1.0 should not be treated as the complete reproducibility package for the current manuscript**. The revised manuscript should cite the new versioned release after the final five-day archive is uploaded.
 
 ## Data provenance
 
