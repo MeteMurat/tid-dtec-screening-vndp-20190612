@@ -1,6 +1,6 @@
 # v2.0.0 — Five-Day Dense-Network Reliability Audit
 
-**Status:** release-candidate documentation for the revised manuscript. The binary/source package should be uploaded as a new GitHub release asset only after the final reproducibility archive is frozen and its SHA-256 manifest is generated.
+**Status:** frozen reproducibility package prepared for publication. The scientific results were not recomputed during package assembly.
 
 ## Manuscript scope
 
@@ -53,10 +53,26 @@ The release is designed to preserve unfavorable and inconclusive outcomes rather
 - Median native same-link IPP speed: 94.2 m s^-1; 95th percentile: 308.4 m s^-1.
 - Independent PA836 ionosonde variability is finite for 42 of 71 candidate windows, with no positive aggregate concordance established.
 
-## Expected release assets
+## Frozen release assets and integrity
 
-The final v2.0.0 release should contain a single frozen reproducibility archive and a machine-readable SHA-256 manifest. The archive should include the exact analysis code and environment specification; the 435-station master list and daily availability records; predefined candidate-window tables; interpolation- and screening-sensitivity products; carrier-phase/code consistency products; physical-propagation and IPP-geometry-null outputs; five-day baseline, geomagnetic, ionosonde, and density-degradation results; publication figures and figure-generation resources; and provenance/adjudication records needed to reproduce the manuscript tables and figures.
+The canonical reproducibility archive is:
+
+`tid_dtec_screening_reproducibility_v2.0.0_20260904_105618.zip`
+
+- Archive size: **361,108,480 bytes**.
+- Archive SHA-256: `6103BD696697CA6E22AFFB8751FAC87116938ED30DC65D1B0D2883BBB8734085`.
+- Companion checksum file: `tid_dtec_screening_reproducibility_v2.0.0_20260904_105618.zip.sha256`.
+- Package assembly mode: `scientific_recomputation=False`, `package_assembly_only=True`.
+- Selected scientific/reproducibility evidence files: 10,133.
+- Clean-extract verification: **PASS**, with 10,147 physical package files verified.
+- Authoritative dense phase/code grid SHA-256: `5A955A2F5719B54B82DF75B97CB66EEC438785653351EE8D2B0C27E25A8A0F5C`.
+- `MANIFEST_SHA256.csv` SHA-256: `D500BF1E8DC137045192B775AA7F348B7022EC8581462988300F4F1FB0A176E3`.
+- `SHA256SUMS.txt` SHA-256: `DE844DC829E0509AE1D672AA3EE3D5F6BB16BB3215FCE0C3FE6E5AB8E5B14718`.
+
+A read-only differential audit found no manifest entries that were absent from the physical package. `MANIFEST_SHA256.csv` and `SHA256SUMS.txt` are top-level integrity metadata generated after the payload manifest and are therefore not self-listed in that manifest.
+
+The archive includes the analysis code and environment specification; the 435-station master list and daily availability records; predefined candidate-window tables; interpolation- and screening-sensitivity products; carrier-phase/code consistency products; physical-propagation and IPP-geometry-null outputs; five-day baseline, geomagnetic, ionosonde, and density-degradation results; publication figures and figure-generation resources; and provenance/adjudication records needed to trace the manuscript tables and figures.
 
 ## Relationship to v1.1.0
 
-Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage. It should not be cited as the complete reproducibility package for the revised five-day manuscript. The revised manuscript should cite the new v2.0.0 release after its final archive and SHA-256 manifest are uploaded.
+Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage. It should not be cited as the complete reproducibility package for the revised five-day manuscript. The revised manuscript should cite `v2.0.0` once the frozen assets above are published in the GitHub release.
