@@ -1,6 +1,6 @@
 # v2.0.0 — Five-Day Dense-Network Reliability Audit
 
-**Status:** frozen reproducibility package prepared for publication. The scientific results were not recomputed during package assembly.
+**Status:** published frozen reproducibility release. The scientific results were not recomputed during package assembly.
 
 ## Manuscript scope
 
@@ -75,4 +75,4 @@ The archive includes the analysis code and environment specification; the 435-st
 
 ## Relationship to v1.1.0
 
-Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage. It should not be cited as the complete reproducibility package for the revised five-day manuscript. The revised manuscript should cite `v2.0.0` once the frozen assets above are published in the GitHub release.
+Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage. It should not be cited as the complete reproducibility package for the revised five-day manuscript. The revised manuscript should cite this `v2.0.0` release as the reproducibility package for the revised five-day study.
