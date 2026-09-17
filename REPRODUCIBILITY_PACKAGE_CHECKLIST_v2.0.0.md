@@ -1,52 +1,62 @@
 # Reproducibility Package Checklist — v2.0.0
 
-This checklist defines the minimum public archive expected for the revised five-day dense-network manuscript. Items should be frozen before the GitHub release is published.
+**Status:** published and frozen.
 
-## Core reproducibility material
+This document records the intended completeness criteria for the five-day dense-network reproducibility package that was subsequently published as release `v2.0.0`. It is retained as provenance for the release-freeze process rather than as a current to-do list.
 
-- [ ] Exact analysis source code used for the manuscript.
-- [ ] Python/package environment specification with version numbers.
-- [ ] 435-station master receiver list.
-- [ ] Daily station-availability records for 10–14 June 2019.
-- [ ] Source-data inventory and provider metadata for GPS RINEX/navigation inputs.
-- [ ] Fixed grid/interpolation configuration.
-- [ ] Complete 71-window candidate table with immutable date/start/end/duration fields.
+## Published release
 
-## Reliability-audit products
+- Release tag: `v2.0.0`
+- Release page: https://github.com/MeteMurat/tid-dtec-screening-vndp-20190612/releases/tag/v2.0.0
+- Canonical archive: `tid_dtec_screening_reproducibility_v2.0.0_20260904_105618.zip`
+- Archive size: 361,108,480 bytes
+- Verified SHA-256: `6103BD696697CA6E22AFFB8751FAC87116938ED30DC65D1B0D2883BBB8734085`
+- Companion checksum file: `tid_dtec_screening_reproducibility_v2.0.0_20260904_105618.zip.sha256`
+- Clean-extract verification: PASS
 
-- [ ] Dense-network spatial-support diagnostics.
-- [ ] Interpolation-sensitivity scenario table and per-scenario outputs.
-- [ ] Screening coefficient/threshold sensitivity and ablation outputs.
-- [ ] Carrier-phase/code comparison tables and frozen map products.
-- [ ] Five-day transportability tables.
-- [ ] Simpler baseline-comparison tables.
-- [ ] Physical-propagation estimator outputs.
-- [ ] IPP-motion and stationary-field sampling-geometry-null outputs.
-- [ ] Geomagnetic/solar contextual time series and source metadata.
-- [ ] PA836 ionosonde input inventory, derived standardized residuals, and window-level comparison table.
-- [ ] Controlled receiver-density degradation outputs for 100%, 75%, 50%, 25%, and 10% retention.
+The scientific scope and interpretation boundaries of the frozen package are documented in [`RELEASE_NOTES_v2.0.0.md`](RELEASE_NOTES_v2.0.0.md).
 
-## Publication products
+## Core reproducibility criteria used for the release freeze
 
-- [ ] Final manuscript figures in publication format.
-- [ ] Figure-generation scripts/resources.
-- [ ] Final manuscript tables in machine-readable CSV/JSON form where applicable.
-- [ ] Provenance records linking figures/tables to the exact frozen products used.
-- [ ] Claim-boundary/read-me document describing what the release does and does not validate.
+The package was designed to preserve:
 
-## Integrity and release freeze
+- exact analysis source code and software-environment information;
+- the fixed 435-station master receiver list;
+- daily station-availability records for 10--14 June 2019;
+- source-data inventory and provider metadata for GPS RINEX/navigation inputs;
+- fixed grid/interpolation configuration;
+- the complete 71-window candidate universe with frozen timing fields; and
+- machine-readable integrity and provenance records.
 
-- [ ] Single final reproducibility archive created after all above items are frozen.
-- [ ] SHA-256 digest generated for the archive.
-- [ ] Machine-readable SHA-256 manifest generated for individual distributed products.
-- [ ] Archive extracted into a clean directory and smoke-tested.
-- [ ] No stale single-day exploratory labels are presented as current validation truth.
-- [ ] No human- or AI-generated labels are presented as independent ground truth.
-- [ ] README and release notes match the final manuscript title and scope.
-- [ ] Manuscript Data and code availability statement matches the exact published release tag and archive name.
+## Reliability-audit criteria used for the release freeze
 
-## Planned release
+The frozen five-day package was designed to include the evidence needed to trace:
 
-Target release tag: `v2.0.0`
+- dense-network spatial-support diagnostics;
+- interpolation-sensitivity outputs;
+- screening coefficient/threshold sensitivity and component-ablation outputs;
+- carrier-phase/code comparison products;
+- five-day dense-campaign rule-transport results;
+- simpler baseline comparisons;
+- physical-propagation estimator outputs;
+- IPP-motion and stationary-field sampling-geometry-null outputs;
+- geomagnetic/solar contextual information;
+- PA836 ionosonde cross-check products; and
+- controlled receiver-density degradation at 100%, 75%, 50%, 25%, and 10% retention.
 
-Legacy release `v1.1.0` remains available for the earlier single-day exploratory stage and should not be used as the complete reproducibility package for the revised five-day manuscript.
+## Publication and integrity criteria
+
+The release-freeze process required publication-figure resources, machine-readable provenance, archive-level SHA-256 verification, clean extraction, and preservation of the manuscript's interpretation boundaries. In particular:
+
+- the 435-station reconstruction is a high-support reproducibility reference, not physical ground truth;
+- “moderate” and “strong” are numerical screening-support states, not independently confirmed TID labels;
+- no human- or AI-generated label is treated as independent physical ground truth; and
+- unfavorable, null, or internally inconsistent reliability outcomes are preserved rather than optimized away.
+
+## Scope boundary relative to the current manuscript
+
+Release `v2.0.0` is the frozen reproducibility package for the **five-day dense-network reliability audit**. The current manuscript additionally contains a later, separately prespecified **48-date pointwise temporal-transportability extension spanning 2018--2024**. That later extension is not represented by the standalone assets of `v2.0.0` and should not be inferred from this checklist.
+
+## Relationship to v1.1.0
+
+Release `v1.1.0` remains available as a legacy archive for the earlier single-day exploratory stage. It also preserves the earlier supplementary animations and paired still images. It should not be cited as the complete reproducibility package for the current manuscript.
