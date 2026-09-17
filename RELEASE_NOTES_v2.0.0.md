@@ -2,13 +2,15 @@
 
 **Status:** published frozen reproducibility release. The scientific results were not recomputed during package assembly.
 
-## Manuscript scope
+## Scope of this frozen release
 
-This release corresponds to the revised manuscript:
+Release `v2.0.0` preserves the five-day dense-network reliability audit that remains the map-level core of the current manuscript:
 
-**Reliability-Audited Screening of TID-Like Structures in Dense GPS-Derived dTEC Maps: Sampling Density, Propagation, and Cross-Instrument Tests**
+**Reliability Auditing and Temporal Transportability of GPS-Derived Ionospheric Disturbance Mapping: Sampling, Propagation, and Cross-Instrument Constraints**
 
-The revised analysis uses a fixed master network of 435 dual-frequency GPS stations over 10–14 June 2019 (DOY 161–165). Carrier-phase dTEC is the primary measurement branch and code-derived dTEC is retained as a measurement-consistency comparison.
+The five-day analysis uses a fixed master network of 435 dual-frequency GPS stations over 10–14 June 2019 (DOY 161–165). Carrier-phase dTEC is the primary measurement branch and code-derived dTEC is retained as a common-geometry measurement-consistency comparison.
+
+The current manuscript also contains a later, separately prespecified 48-date pointwise temporal-transportability extension spanning 2018–2024. That extension post-dates this frozen release and is **not represented by the standalone assets of `v2.0.0`**. Release `v2.0.0` should therefore be cited specifically as the reproducibility package for the five-day dense-network reliability audit, not as an exhaustive archive of every analysis subsequently added to the manuscript.
 
 ## Scientific analyses represented in v2.0.0
 
@@ -18,7 +20,7 @@ The revised analysis uses a fixed master network of 435 dual-frequency GPS stati
 - Thirteen-scenario interpolation sensitivity audit.
 - Sixty-five-scenario screening coefficient/threshold sensitivity and component-ablation audit.
 - Carrier-phase versus code-derived dTEC consistency analysis.
-- Five-day transportability analysis.
+- Five-day dense-campaign rule-transport analysis.
 - Simpler amplitude, projected-keogram, and spectral-peak baseline comparisons.
 - Independent physical-propagation estimator comparison for the predefined 12 June 2019 midday case-study window.
 - IPP-motion and stationary-field sampling-geometry null analysis.
@@ -41,7 +43,7 @@ The release is designed to preserve unfavorable and inconclusive outcomes rather
 - No independent blinded human relabeling study is used as validation ground truth.
 - Classification-accuracy metrics such as sensitivity, specificity, precision, recall, F1 score, and ROC-AUC are not reported because no independent binary truth set exists.
 
-## Key quantitative outcomes represented in the manuscript
+## Key quantitative outcomes represented in the five-day release
 
 - 435-station master GPS network; 423–435 valid station products per day.
 - 71 predefined candidate windows across 10–14 June 2019.
@@ -73,6 +75,16 @@ A read-only differential audit found no manifest entries that were absent from t
 
 The archive includes the analysis code and environment specification; the 435-station master list and daily availability records; predefined candidate-window tables; interpolation- and screening-sensitivity products; carrier-phase/code consistency products; physical-propagation and IPP-geometry-null outputs; five-day baseline, geomagnetic, ionosonde, and density-degradation results; publication figures and figure-generation resources; and provenance/adjudication records needed to trace the manuscript tables and figures.
 
-## Relationship to v1.1.0
+## Relationship to v1.1.0 and supplementary animations
 
-Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage. It should not be cited as the complete reproducibility package for the revised five-day manuscript. The revised manuscript should cite this `v2.0.0` release as the reproducibility package for the revised five-day study.
+Release `v1.1.0` is retained unchanged as a legacy archive for the earlier single-day exploratory stage and should not be cited as the complete reproducibility package for the current manuscript.
+
+Legacy supplementary animations remain publicly available in `v1.1.0`:
+
+- `Video_S1_Event14.mp4`
+- `Video_S2_ModerateCandidates.mp4`
+- `Video_S3_ArtifactAblation.mp4`
+
+The paired still images are preserved in the same release. These animations are supplementary visualizations from the earlier exploratory stage and are not quantitative validation targets or independent physical evidence for the current five-day or multi-year analyses.
+
+Current repository scope and release relationships are summarized in [`README.md`](README.md).
